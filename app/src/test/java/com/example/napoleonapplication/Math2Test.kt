@@ -8,14 +8,14 @@ class ExampleUnitTest {
 
     @Test
     fun example(){
-        val basket = Basket(listOf(
+        val printBasket = Basket(listOf(
             Product(title = "Iphone Case", price = 150.0, salePercent = 30),
             Product(title = "Samsung Case", price = 150.0, salePercent = 5)
         ))
 
         val cartPrinter: PricePrinter<Basket> = PriceFormat()
 
-        cartPrinter.format(basket)
+        cartPrinter.format(printBasket)
     }
 
 }
