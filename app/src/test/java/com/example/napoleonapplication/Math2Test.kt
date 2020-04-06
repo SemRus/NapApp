@@ -13,9 +13,9 @@ class ExampleUnitTest {
             Product(title = "Samsung Case", price = 150.0, salePercent = 5)
         ))
 
-        val cartPrinter: PricePrinter<Basket> = PriceFormat()
+        val basketPrinter: PricePrinter<Basket> = PriceFormat()
 
-        cartPrinter.format(printBasket)
+        basketPrinter.format(printBasket)
     }
 
 }
