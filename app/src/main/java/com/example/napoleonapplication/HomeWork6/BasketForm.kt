@@ -6,7 +6,7 @@ class BasketForm : Form<Basket> {
 
 
     override fun format(formatted: Basket): String {
-        var result: String = " "
+        var fullPrice: String = " "
 
         fun formatPrice(price: Double): String{
             return if (floor(price) ==price){
@@ -18,11 +18,11 @@ class BasketForm : Form<Basket> {
 
         formatted.getProducts().forEach {
             val price = it.calcDiscountPrice()
-            result += "${it.getTitle()}: ${formatPrice(price)} \n"
+            fullPrice += "${it.getTitle()}: ${formatPrice(price)} \n"
         }
 
-        result += ("Цена на все товары: ${formatPrice(formatted.fullPrice())}")
+        fullPrice += ("Цена на все товары: ${formatPrice(formatted.fullPrice())}")
 
-        return result
+        return fullPrice
     }
 }

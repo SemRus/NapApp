@@ -19,4 +19,11 @@ class Product2 (
         fun getTitle(): String{
             return title
         }
+
+        fun getPrice(): String{
+            return price.toString()
+        }
+        fun getSalePersent(): String{
+            return salePercent.toString()
+        }
 }
