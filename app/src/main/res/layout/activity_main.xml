@@ -27,7 +27,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/ic_launcher_foreground"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/textView8"
@@ -71,13 +72,13 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/checkoutName"
+        android:id="@+id/checkoutFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:ems="10"
+        android:hint="Введите Имя"
         android:inputType="textPersonName"
-        android:text="Имя"
         android:textColorHighlight="#717171"
         android:textColorLink="#A1A1A1"
         app:layout_constraintEnd_toEndOf="parent"
@@ -132,37 +133,37 @@
         app:layout_constraintTop_toBottomOf="@+id/price" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/checkoutSecondName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Введите Фамилию"
         android:inputType="textPersonName"
-        android:text="Фамилия"
-        app:layout_constraintEnd_toEndOf="@+id/checkoutName"
-        app:layout_constraintTop_toBottomOf="@+id/checkoutName" />
+        app:layout_constraintEnd_toEndOf="@+id/checkoutFirstName"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutFirstName" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/checkoutMiddleName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="Введите Отчество"
         android:inputType="textPersonName"
-        android:text="Отчество"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintEnd_toEndOf="@+id/checkoutSecondName"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutSecondName" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/checkoutPhoneNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="+7(8) 9009999090"
         android:inputType="phone"
-        android:text="Телефон"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintEnd_toEndOf="@+id/checkoutMiddleName"
+        app:layout_constraintTop_toBottomOf="@+id/checkoutMiddleName" />
 
     <TextView
         android:id="@+id/product"
