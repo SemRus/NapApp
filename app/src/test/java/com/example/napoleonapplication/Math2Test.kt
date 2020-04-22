@@ -3,11 +3,11 @@ package com.example.napoleonapplication
 import org.junit.Test
 import kotlin.math.floor
 
-class ExampleUnitTest {
+class ExampleUnitTest1 {
 
 
     @Test
-    fun example(){
+    fun example1(){
         val printBasket = Basket(listOf(
             Product(title = "Iphone Case", price = 150.0, salePercent = 30),
             Product(title = "Samsung Case", price = 150.0, salePercent = 5)

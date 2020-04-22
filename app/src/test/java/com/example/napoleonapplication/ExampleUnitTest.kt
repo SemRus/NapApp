@@ -32,7 +32,7 @@ fun formatPrise(price: Double, size: String, discount: Int) {
     }
 }
 
-class ExampleUnitTest {
+class ExampleUnitTest2 {
 
     @Test
     fun addition_fun(){
