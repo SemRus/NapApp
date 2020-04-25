@@ -2,11 +2,18 @@ package com.example.napoleonapplication.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.ViewAnimationUtils
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.napoleonapplication.CatalogPresenter
+import com.example.napoleonapplication.Product
 import com.example.napoleonapplication.R
 import kotlinx.android.synthetic.main.catalog_layout.*
 
-class CatalogActivity: BaseActivity() {
+class CatalogActivity: BaseActivity(), CatalogView {
+
+    private val presenter = CatalogPresenter()
+    private val adapter = CategoryAdapter {category ->
+        presenter.removeItem(category)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +30,18 @@ class CatalogActivity: BaseActivity() {
             startActivity(intent)
         }
 
+        categoryRv.layoutManager = LinearLayoutManager(this)
+        categoryRv.adapter = adapter
+        presenter.setData()
+        presenter.attachView(this)
+    }
+
+    override fun setCategories(list: MutableList<Product>) {
+        adapter.setData(list)
+    }
+
+    override fun removeItem(position: Int) {
+        adapter.notifyItemRemoved(position)
     }
 
 
